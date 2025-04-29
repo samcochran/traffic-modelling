@@ -1,7 +1,15 @@
 # traffic-modelling
 
-This project aims to model traffic dynamics for a system of cars moving along a road and through an intersection. Traffic modelling can be approached in at least two ways. First, one can consider a macroscopic traffic flow model, in which only the statistical properties of a large number of cars is analyzed. This approach considers traffic on the road similarly to fluid in a pipe, and differential equation approaches from fluid dynamics can be applied. Second, one can consider a microscopic traffic flow model, in which individual vehicles are modeled explicitly. This second approach is the one that we will take in this project.
+This project aims to model traffic dynamics for a system of cars moving along a road and through an intersection through an agent-based approach, where each car is an actor with certain attributes and allowed actions based on its position with respect to other cars and the road environment.
 
-Specifically, we will take a cellular automaton approach, wherein the road is divided into discrete sections. A car is assumed to occupy exactly one of these discrete road sections. Time is discretized in this model as well. The discretization of time allows human reaction time to be in some sense encoded in the model, as each agent's decisions can essentially only affect the next time step.
+## Four-way stop model 
 
-By modelling individual cars as agents with a relatively simple set of rules by which they make decisions, emergent phenomena of traffic jams can be observed. We can also evaluate the effectiveness of different types of intersections. For the purposes of this project, we will limit ourselves to two simple models: an open road that functions like a freeway and a four-way stop. We will evaluate these models to seek out thresholds that mark bifurcation points, such as car densities where traffic jams on the freeway suddenly occur and car densities in each direction for which the four-way stop is most and least efficient.
+Cars that will turn left are plotted in blue, while cars that will turn right are plotted in red. Cars that will continue straight through the intersection are shown in white.
+
+## Even vs. uneven density in each direction
+
+When there is significantly higher car density in one direction compared to another, the four-way stop model becomes much less efficient. While cars moving in the direction with lower traffic density pass through the intersection without having to wait, buildup occurs in the direction with higher traffic density, with most cars spending most of their time waiting in line to get to the intersection.
+
+## Simple Freeway Models
+
+Based on how the model is initialized, stop and go traffic may or may not occur in the model, even if the number of cars and size of the environment remain the same.
