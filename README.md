@@ -6,6 +6,8 @@ This project aims to model traffic dynamics for a system of cars moving along a 
 
 Cars that will turn left are plotted in blue, while cars that will turn right are plotted in red. Cars that will continue straight through the intersection are shown in white. The environment is implemented with periodic boundary conditions, so that when a car exits the environment at one edge, it immediately reenters at the opposite edge. Whenever a car passes through one edge and reenters through the opposite edge, it is randomly assigned new navigation data and its color changes to reflect this update to whether it will turn in one direction or the other.
 
+![test...](https://github.com/samcochran/traffic-modelling/blob/main/animations/model2.gif)
+
 ## Even vs. uneven density in each direction
 
 When there is significantly higher car density in one direction compared to another, the four-way stop model becomes much less efficient. While cars moving in the direction with lower traffic density pass through the intersection without having to wait, buildup occurs in the direction with higher traffic density, with most cars spending most of their time waiting in line to get to the intersection.
